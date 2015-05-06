@@ -1,0 +1,20 @@
+#Le fichier .htaccess permet de réecrire les URLs
+Options +FollowSymlinks
+RewriteEngine on
+RewriteRule ^Home/$ Controller/controller_index.php [L]
+
+RewriteRule ^Grain-de-sel/$ Controller/controller_graindesel.php
+
+RewriteRule ^Offre/([a-z]+)/$ Controller/controller_offre.php?offre=$1
+RewriteRule ^Toutes-nos-offres/$ Controller/controller_toutesoffres.php
+
+RewriteRule ^Reference/$ Controller/controller_reference.php
+RewriteRule ^Reference/([a-z]+)/$ Controller/controller_reference.php?reference=$1
+
+RewriteRule ^Module/$ Controller/controller_module.php
+RewriteRule ^Module/([a-z]+)/$ Controller/controller_module.php?module=$1
+
+RewriteRule ^Inscription/$ Controller/controller_inscription.php
+RewriteRule ^Connexion/$ Controller/controller_connexion.php
+RewriteRule ^Deconnexion/$ Controller/controller_deconnexion.php?urlCourante=$1
+
